@@ -6,25 +6,20 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 use SIGPAD\Http\Requests;
-use SIGPAD\Situacao_processo;
+use SIGPAD\Local_infracao;
 
-class Situacao_processo_controller extends Controller
+class local_infracao_controller extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
     public function index()
     {
-        //TODO
-        //$situacao_processos = DB::select('SELECT * FROM ' . Situacao_processo->getTable );
-        //$situacao_processos = Situacao_processo::all(); //OKOKOK
-        //$situacao_processos = DB::select('SELECT * FROM situacao_processos' ); //Situacao_processo::getTable()
-        $sit = Situacao_processo::orderBy('descricao_situacao_processo', 'ASC')->paginate(10); //OKOKOK
+        $local_infracao = Local_infracao::orderBy('descricao_local_infracao', 'ASC')->paginate(10); //OKOKOK
         
-        return view ('situacao_processo.index', compact('sit'));
+        return view ('local_infracao.index', compact('local_infracao'));
     }
 
     /**
@@ -34,8 +29,9 @@ class Situacao_processo_controller extends Controller
      */
     public function create()
     {
-        return view('situacao_processo.create');
+        return view('local_infracao.create');
     }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -44,11 +40,10 @@ class Situacao_processo_controller extends Controller
      */
     public function store(Request $request)
     {
-        Situacao_processo::create($request->all());
+        Local_infracao::create($request->all());
 
-        return redirect()->route('situacao_processo.index');
+        return redirect()->route('local_infracao.index');
     }
-    
 
     /**
      * Display the specified resource.
@@ -58,9 +53,9 @@ class Situacao_processo_controller extends Controller
      */
     public function show($id)
     {
-        $situacao_processo = Situacao_processo::findOrFail($id);
+        $local_infracao = Local_infracao::findOrFail($id);
 
-        return view('situacao_processo.show', compact('situacao_processo'));
+        return view('local_infracao.show', compact('local_infracao'));
     }
 
     /**
@@ -71,9 +66,9 @@ class Situacao_processo_controller extends Controller
      */
     public function edit($id)
     {
-        $situacao_processo = Situacao_processo::findOrFail($id);
+        $local_infracao = Local_infracao::findOrFail($id);
 
-        return view('situacao_processo.edit', compact('situacao_processo'));
+        return view('local_infracao.edit', compact('local_infracao'));
     }
 
     /**
@@ -85,9 +80,9 @@ class Situacao_processo_controller extends Controller
      */
     public function update(Request $request, $id)
     {
-        $situacao_processo = Situacao_processo::findOrFail($id)->update($request->all());
+        $local_infracao = Local_infracao::findOrFail($id)->update($request->all());
 
-        return redirect()->route('situacao_processo.index');
+        return redirect()->route('local_infracao.index');
     }
 
     /**
@@ -98,8 +93,7 @@ class Situacao_processo_controller extends Controller
      */
     public function destroy($id)
     {
-        //$situacao_processo = Situacao_processo::find($id)->delete();
-        Situacao_processo::destroy($id);
-        return redirect()->route('situacao_processo.index');
+        Local_infracao::destroy($id);
+        return redirect()->route('local_infracao.index');
     }
 }

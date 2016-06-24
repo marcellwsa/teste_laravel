@@ -8,5 +8,5 @@ class Local_infracao extends Model
 {
     protected $table = 'local_infracaos';
     
-    protected $fillable = 'descricao_local_infracao';
+    protected $fillable = ['descricao_local_infracao'];
 }

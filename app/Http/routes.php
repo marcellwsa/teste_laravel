@@ -19,4 +19,6 @@ Route::resource('situacao_processo', 'Situacao_processo_Controller');
 
 Route::resource('tipo_infracao_disciplinar', 'Tipo_infracao_disciplinar_Controller');
 
+Route::resource('local_infracao', 'Local_infracao_controller');
+
 

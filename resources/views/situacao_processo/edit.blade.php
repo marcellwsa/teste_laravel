@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('title', 'Editar usuario')
+@section('title', 'Editar Situação dos Processos')
 
 @section('content')
 	{!! Form::open(['route' => ['situacao_processo.update', $situacao_processo], 'method' => 'PUT']) !!}
