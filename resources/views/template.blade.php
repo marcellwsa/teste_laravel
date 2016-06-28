@@ -18,7 +18,7 @@
 				</div>
 
 				<footer>
-					<br><a href="http://www.prf.gov.br"></a>PRF Brasil</p>
+					<br><a href="http://www.prf.gov.br">PRF Brasil</a></p>
 				</footer>
 			</div>
 		</div>
