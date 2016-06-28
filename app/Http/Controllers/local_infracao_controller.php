@@ -96,4 +96,6 @@ class local_infracao_controller extends Controller
         Local_infracao::destroy($id);
         return redirect()->route('local_infracao.index');
     }
+
+    
 }

@@ -21,4 +21,5 @@ Route::resource('tipo_infracao_disciplinar', 'Tipo_infracao_disciplinar_Controll
 
 Route::resource('local_infracao', 'Local_infracao_controller');
 
+Route::resource('processo', 'Processo_controller');
 

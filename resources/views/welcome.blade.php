@@ -40,6 +40,7 @@
     <a href="../public/situacao_processo">Situação dos processos</a><br>
     <a href="../public/tipo_infracao_disciplinar">Tipos de infrações</a><br>
     <a href="../public/local_infracao">Local das Infrações</a><br>
+    <a href="../public/processo">Processos</a><br>
 
 
         <div class="container">
