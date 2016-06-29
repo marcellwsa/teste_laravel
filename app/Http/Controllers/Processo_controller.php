@@ -53,6 +53,7 @@ class Processo_controller extends Controller
         $processo->local_infracao_id        = Input::get('local_infracao');
         $processo->tipo_infracao_disciplinar_id = Input::get('tipo_infracao_disciplinar');
         $processo->observacoes              = Input::get('observacoes');
+        $processo->data_conhecimento_fato   = Input::get('data_conhecimento_fato');
         
         $processo->save();
 
@@ -101,6 +102,7 @@ class Processo_controller extends Controller
         $processo->local_infracao_id        = Input::get('local_infracao');
         $processo->tipo_infracao_disciplinar_id = Input::get('tipo_infracao_disciplinar');
         $processo->observacoes              = Input::get('observacoes');
+        $processo->data_conhecimento_fato   = Input::get('data_conhecimento_fato');
         
         $processo->save();
 

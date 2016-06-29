@@ -12,8 +12,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call('Situacao_processos_tableSeeder');
-        // $this->call('Local_infracaos_tableSeeder');
+        $this->call('Situacao_processos_tableSeeder');
+        $this->call('Local_infracaos_tableSeeder');
         $this->call('Tipo_infracao_disciplinars_tableSeeder');
 
     }
@@ -92,7 +92,9 @@ class Local_infracaos_tableSeeder extends Seeder
 		'14ª DEL.',
 		'15ª DEL.',
 		'16ª DEL.',
-		'17ª DEL.'
+		'17ª DEL.',
+		'Vários',
+		'Indeterminado'
 			);
 
 		foreach ($array_local_infracao as $key => $value) {

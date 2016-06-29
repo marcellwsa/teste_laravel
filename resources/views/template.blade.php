@@ -11,7 +11,7 @@
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<div class="panel panel-default">
-					<div class="panel-heading">@yield('title')</div>
+					<div class="panel-heading"><a href="https://laravel/teste_laravel/public">Home </a> - @yield('title')</div>
 					<div class="panel-body">
 						@yield('content')
 					</div>

@@ -5,6 +5,10 @@ namespace SIGPAD\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+use Input;
+use Validator;
+use Redirect;
+
 use SIGPAD\Http\Requests;
 use SIGPAD\Situacao_processo;
 
@@ -44,9 +48,16 @@ class Situacao_processo_controller extends Controller
      */
     public function store(Request $request)
     {
-        Situacao_processo::create($request->all());
+        
+        $validator = Validator::make(Input::all(), Situacao_processo::$rules);
 
-        return redirect()->route('situacao_processo.index');
+        if ($validator->fails()) {
+            return view('situacao_processo.create')->withErrors($validator)->withInput(Input::all());
+        } else {
+            Situacao_processo::create($request->all());
+
+            return redirect()->route('situacao_processo.index');
+        }
     }
     
 

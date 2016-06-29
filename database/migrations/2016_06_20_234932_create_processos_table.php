@@ -25,6 +25,8 @@ class CreateProcessosTable extends Migration
             $table->foreign('situacao_processo_id')->references('id')->on('situacao_processos');
             $table->foreign('tipo_infracao_disciplinar_id')->references('id')->on('tipo_infracao_disciplinars');
         });
+        
+        
     }
 
     /**

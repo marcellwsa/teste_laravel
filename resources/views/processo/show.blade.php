@@ -17,6 +17,9 @@
 			$situacao->getDescricao($processo->situacao_processo_id) ?></li>
 
 		<li><b>Observações:</b> {{ $processo->observacoes }}</li>
+
+		<li><b>Data Conhecimento:</b> <?php $proc = new SIGPAD\Processo;
+			$proc->traduz_data_para_exibir($processo->data_conhecimento_fato) ?></li>
 		<li>
 			{!! Form::open(['route' => ['processo.destroy', $processo->id], 'method' => 'DELETE']) !!}
 							{!! Form::submit('Excluir', ['class' => 'btn btn-danger']) !!}

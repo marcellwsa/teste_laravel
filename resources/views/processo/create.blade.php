@@ -33,6 +33,11 @@
 		</div>
 
 		<div > <br>
+			{!! Form::label('data_conhecimento_fato', 'Data de conhecimento do fato') !!}
+			{!! Form::text('data_conhecimento_fato', null, ['class' => 'form-control']) !!}
+		</div>
+
+		<div > <br>
 			{!! Form::submit('Criar', ['class' => 'btn btn-primary']) !!}
 		</div>
 

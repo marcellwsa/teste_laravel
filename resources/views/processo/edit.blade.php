@@ -34,6 +34,15 @@
 		</div>
 
 		<div > <br>
+			{!! Form::label('data_conhecimento_fato', 'Data de conhecimento do fato') !!}
+			{{ $proc = new SIGPAD\Processo }}
+			<!-- 
+			{!! Form::text('data_conhecimento_fato', $proc->traduz_data_para_exibir($processo->data_conhecimento_fato), ['class' => 'form-control']) !!} -->
+			<input type="text" name="data_conhecimento_fato" value="<?php $proc->traduz_data_para_exibir($processo->data_conhecimento_fato) ;?>" 
+			class= "form-control" />
+		</div>
+
+		<div > <br>
 			{!! Form::submit('Salvar alterações', ['class' => 'btn btn-primary']) !!}
 		</div>
 
