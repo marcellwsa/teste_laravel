@@ -14,14 +14,14 @@ class Processo extends Model
 
     public static function traduz_data_para_exibir($data) {
     	if ($data == '' or $data == '0000-00-00') {
-    		echo 'sem data';
+    		return 'sem data';
     	} else {
     		$dados = explode('-', $data);
     		if (count($dados) !=3) {
-    			echo $data;
+    			return $data;
     		}
     		$data_exibir = "{$dados[2]}/{$dados[1]}/{$dados[0]}";
-    		echo $data_exibir;
+    		return $data_exibir;
     	}
     
     }
