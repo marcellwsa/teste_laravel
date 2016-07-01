@@ -25,6 +25,7 @@
 			<ul>
 				<li><b>Advertência: </b>
 					<?php  $data_com_traco = str_replace('/', '-', $proc->traduz_data_para_exibir($processo->data_conhecimento_fato)); ?>
+					<!-- Pega a data do BD, converte para o formato xx/xx/xxxx, troca a / por - e exibe a soma das datas no formato xx/xx/xxxx -->
 					<?php echo date('d/m/Y', strtotime("+180 days",strtotime($data_com_traco))); ?>
 				</li>
 				<li><b>Suspensão: </b>

@@ -24,7 +24,7 @@
 		</tr>
 			@foreach($processo as $proc)
 		<tr>
-			<td> {{ $proc->id }} </td>
+			<td align="center"> {{ $proc->id }} </td>
 			<td> {{ $proc->numero_processo }} </td>
 			<td> <?php   $local = new Local_infracao; 
 			$local->getDescricao($proc->local_infracao_id) ?></td>   
