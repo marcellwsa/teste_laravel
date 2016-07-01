@@ -1,8 +1,6 @@
-@extends('template')
+@extends('Shared.layout')
 
-@section('title', 'Situação dos processos')
-
-@section ('content')
+@section ('conteudo')
 
 <h1>Situacões: </h1>
 

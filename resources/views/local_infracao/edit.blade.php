@@ -1,8 +1,6 @@
-@extends('template')
+@extends('Shared.layout')
 
-@section('title', 'Editar Local da Infração')
-
-@section('content')
+@section ('conteudo')
 	{!! Form::open(['route' => ['local_infracao.update', $local_infracao], 'method' => 'PUT']) !!}
 		<div >
 			{!! Form::label('descricao_local_infracao', 'Descrição') !!}

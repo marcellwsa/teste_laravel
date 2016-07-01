@@ -159,6 +159,7 @@ return [
         SIGPAD\Providers\EventServiceProvider::class,
         SIGPAD\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
         
 

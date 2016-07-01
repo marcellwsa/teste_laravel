@@ -1,8 +1,6 @@
-@extends('template')
+@extends('Shared.layout')
 
-@section('title', 'Processos Cadastrados')
-
-@section ('content')
+@section ('conteudo')
 
 <h1>Processos: </h1>
 

@@ -1,8 +1,6 @@
-@extends('template')
+@extends('Shared.layout')
 
-@section('title', 'Ver Situação do processo')
-
-@section('content')
+@section ('conteudo')
 	<ul>
 		<li><b>Descrição:</b> {{ $situacao_processo->descricao_situacao_processo }}</li>
 		<li>

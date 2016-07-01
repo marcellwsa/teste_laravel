@@ -1,8 +1,6 @@
-@extends('template')
+@extends('Shared.layout')
 
-@section('title', 'Processos')
-
-@section('content')
+@section ('conteudo')
 
 	<ul>
 		<li><b>Processo Cadastrado:</b> {{ $processo->numero_processo }}</li>

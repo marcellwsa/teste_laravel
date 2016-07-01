@@ -1,8 +1,6 @@
-@extends('template')
+@extends('Shared.layout')
 
-@section('title', 'Local das Infrações')
-
-@section ('content')
+@section ('conteudo')
 
 <h1>Local das Infrações: </h1>
 

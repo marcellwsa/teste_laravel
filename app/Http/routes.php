@@ -11,9 +11,17 @@
 |
 */
 
+//Route::group(['prefix' => 'auth'], function () {
+    Route::get('login','Auth\AuthController@getIndex');
+    Route::post('login','Auth\AuthController@postLogin');
+    Route::get('logout','Auth\AuthController@getLogout');
+//});
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/',['as' => 'index', 'uses' => 'HomeController@index']);
 
 Route::resource('situacao_processo', 'Situacao_processo_Controller');
 
