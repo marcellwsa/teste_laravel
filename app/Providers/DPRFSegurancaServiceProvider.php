@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Providers;
+namespace SIGPAD\Providers;
 
-use App\Auth\DPRFSegurancaProvider;
+use SIGPAD\Auth\DPRFSegurancaProvider;
 use Illuminate\Support\ServiceProvider;
 use PRF\RH;
 

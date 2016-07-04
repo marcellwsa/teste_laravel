@@ -11,11 +11,11 @@
 |
 */
 
-//Route::group(['prefix' => 'auth'], function () {
+Route::group(['prefix' => 'auth'], function () {
     Route::get('login','Auth\AuthController@getIndex');
     Route::post('login','Auth\AuthController@postLogin');
     Route::get('logout','Auth\AuthController@getLogout');
-//});
+});
 
 Route::get('/', function () {
     return view('welcome');
