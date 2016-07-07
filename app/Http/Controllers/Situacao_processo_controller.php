@@ -48,7 +48,6 @@ class Situacao_processo_controller extends Controller
      */
     public function store(Request $request)
     {
-        
         $validator = Validator::make(Input::all(), Situacao_processo::$rules);
 
         if ($validator->fails()) {

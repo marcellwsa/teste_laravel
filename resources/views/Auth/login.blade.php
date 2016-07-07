@@ -32,7 +32,7 @@
                     <button type="submit" class="btn btn-primary">Entrar</button>
                     <br><br>
                     <a href="https://www.prf.gov.br/portal/espaco-do-servidor/senhas" target="_blank">Esqueceu a senha,
-                        ou deseja alterá-la?</a>
+                        ou deseja alterá-la?</a>| <a href="#myModalLabel">Fale Conosco</a>
                     {!! Form::close() !!}
                 </div>
             </div>

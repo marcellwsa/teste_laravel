@@ -20,6 +20,9 @@
 				<td>		
 						<a href="{{ route('situacao_processo.show', $situacao->id) }}" class="btn btn-primary">Ver</a>
 						<a href="{{ route('situacao_processo.edit', $situacao->id) }}" class="btn btn-warning">Editar</a>
+						{{ Form::open(array('method' => 'DELETE', 'route' => array('situacao_processo.destroy', $situacao->id))) }}                       
+                            {{ Form::submit('Excluir', array('class' => 'btn btn-danger')) }}
+                        {{ Form::close() }}
 						
 				</td>
 		</tr>

@@ -114,6 +114,7 @@
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel"><i class="icon-comments"></i> Envie seus comentários e dúvidas</h3>
+    
     </div>
     @if(Auth::check())
         <iframe style="width:96%; height:420px; border:0;margin-top: 10px;" id="iframeContato"

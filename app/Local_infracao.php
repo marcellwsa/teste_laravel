@@ -23,5 +23,10 @@ class Local_infracao extends Model
 
         echo $local_infracao->id;
     }
+
+    public function printReport($id)
+    {
+        
+    }
     
 }

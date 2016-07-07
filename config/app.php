@@ -160,6 +160,7 @@ return [
         SIGPAD\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
 
         
 
@@ -213,6 +214,7 @@ return [
         'Input' => Illuminate\Support\Facades\Input::class,
         'Flash' => 'Laracasts\Flash\Flash',
         //'Funcoes'   => 'App\Funcoes\Funcoes',
+        'PDF' => Barryvdh\DomPDF\Facade::class,
         
 
     ],

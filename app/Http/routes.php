@@ -29,5 +29,7 @@ Route::resource('tipo_infracao_disciplinar', 'Tipo_infracao_disciplinar_Controll
 
 Route::resource('local_infracao', 'Local_infracao_controller');
 
+Route::get('local_infracao/{local_infracao}/imprimirDados', ['as' => 'local_infracao.imprimirDados', 'uses' => 'local_infracao_controller@imprimirDados' ]);
+
 Route::resource('processo', 'Processo_controller');
 
