@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use SIGPAD\Http\Requests;
 use SIGPAD\Local_infracao;
 use PDF;
-use dompdf\dompdf;
+use DOMPDF;
 
 class local_infracao_controller extends Controller
 {
@@ -105,7 +105,7 @@ class local_infracao_controller extends Controller
 
         //require_once "config\dompdf.php";
         $dompdf = new dompdf();
-        $html = View::make('/app/views/local_infracao/imprimirDados.blade.php');
+        $html = View::make('local_infracao.imprimirDados');
         $dompdf->load_html($html);
         $dompdf->render();
         $dompdf->stream("teste.pdf");
