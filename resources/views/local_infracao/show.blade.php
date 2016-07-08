@@ -1,8 +1,6 @@
-@extends('template')
+@extends('Shared.layout')
 
-@section('title', 'Ver Local da Infração')
-
-@section('content')
+@section ('conteudo')
 	<ul>
 		<li><b>Descrição:</b> {{ $local_infracao->descricao_local_infracao }}</li>
 		<li>
@@ -10,6 +8,9 @@
 							{!! Form::submit('Excluir', ['class' => 'btn btn-danger']) !!}
 						{!! Form::close() !!} 
 
+		</li>
+		<li>
+			
 		</li>
 	</ul>
 @stop

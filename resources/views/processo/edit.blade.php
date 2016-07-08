@@ -1,8 +1,6 @@
-@extends('template')
+@extends('Shared.layout')
 
-@section('title', 'Editar Processo')
-
-@section('content')
+@section ('conteudo')
 	{!! Form::open(['route' => ['processo.update', $processo], 'method' => 'PUT']) !!}
 		
 		<div >

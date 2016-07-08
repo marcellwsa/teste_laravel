@@ -1,8 +1,5 @@
-@extends('template')
-
-@section('title', 'Cadastrar Situação dos processos')
-
-@section('content')
+@extends('Shared.layout')
+@section ('conteudo')
 
 	<!--  Duas opções de mostrar os erros-->
 		@if ($errors->has())

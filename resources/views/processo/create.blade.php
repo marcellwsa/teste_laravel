@@ -1,8 +1,6 @@
-@extends('template')
+@extends('Shared.layout')
 
-@section('title', 'Cadastrar novo processo')
-
-@section('content')
+@section ('conteudo')
 	{!! Form::open(['route' => 'processo.store', 'method' => 'POST']) !!}
 		
 		<div >

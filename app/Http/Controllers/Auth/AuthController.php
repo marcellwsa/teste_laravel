@@ -2,11 +2,13 @@
 
 namespace SIGPAD\Http\Controllers\Auth;
 
-use SIGPAD\User;
-use Validator;
 use SIGPAD\Http\Controllers\Controller;
+use Exception;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
-use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+use PRF\DPRFSeguranca;
 
 class AuthController extends Controller
 {
@@ -21,52 +23,35 @@ class AuthController extends Controller
     |
     */
 
-    use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+    use ThrottlesLogins;
 
-    /**
-     * Where to redirect users after login / registration.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/';
-
-    /**
-     * Create a new authentication controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function getIndex()
     {
-        $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
+        return view("Auth.login");
     }
 
     /**
-     * Get a validator for an incoming registration request.
+     * Função para login no sistema. Os parâmetros (login e senha) são passados por POST
      *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
+     * @return mixed
      */
-    protected function validator(array $data)
+    public function postLogin(Request $request)
     {
-        return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
-        ]);
+        try {
+            Auth::attempt(array('cpf' => $request->get('login'), 'senha' => $request->get('senha')));
+            return Redirect::intended('/'); //mudado aqui
+        } catch (Exception $e) {
+            return back()->withErrors($e->getMessage())->withInput();
+        }
     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return User
-     */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+    public function getLogout() {
+        if(Auth::check()) {
+            $seguranca = new DPRFSeguranca(config("PRF.siglaSistema"),config("PRF.producao"));
+            $seguranca->auditoria(Auth::user()->cpf, "LOGOUT", "Logout", array());
+            Auth::logout();
+        }
+        return redirect("/");
     }
+
 }

@@ -1,8 +1,6 @@
-@extends('template')
+@extends('Shared.layout')
 
-@section('title', 'Cadastrar Local da Infração')
-
-@section('content')
+@section ('conteudo')
 	{!! Form::open(['route' => 'local_infracao.store', 'method' => 'POST']) !!}
 		
 		<div >

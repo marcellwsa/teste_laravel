@@ -1,8 +1,6 @@
-@extends('template')
+@extends('Shared.layout')
 
-@section('title', 'Editar Situação dos Processos')
-
-@section('content')
+@section ('conteudo')
 	{!! Form::open(['route' => ['situacao_processo.update', $situacao_processo], 'method' => 'PUT']) !!}
 		<div >
 			{!! Form::label('descricao_situacao_processo', 'Descrição') !!}

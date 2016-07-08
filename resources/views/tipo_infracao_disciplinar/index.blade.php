@@ -22,6 +22,9 @@
 				<td>		
 						<a href="{{ route('tipo_infracao_disciplinar.show', $tipo->id) }}" class="btn btn-primary">Ver</a>
 						<a href="{{ route('tipo_infracao_disciplinar.edit', $tipo->id) }}" class="btn btn-warning">Editar</a>
+						{{ Form::open(array('method' => 'DELETE', 'route' => array('tipo_infracao_disciplinar.destroy', $tipo->id))) }}                       
+                            {{ Form::submit('Excluir', array('class' => 'btn btn-danger')) }}
+                        {{ Form::close() }}
 						
 				</td>
 		</tr>
