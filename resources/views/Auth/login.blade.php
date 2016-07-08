@@ -16,7 +16,7 @@
                         @foreach ($errors->all() as $erro)
                             <div class="alert alert-danger">
                                 <button type="button" class="close" data-dismiss="alert">&times;</button>
-                                <h4>Erro!</h4>
+                                <h4>Erro?!</h4>
                                 {{ $erro }}
                             </div>
                         @endforeach
@@ -32,7 +32,7 @@
                     <button type="submit" class="btn btn-primary">Entrar</button>
                     <br><br>
                     <a href="https://www.prf.gov.br/portal/espaco-do-servidor/senhas" target="_blank">Esqueceu a senha,
-                        ou deseja alterá-la?</a>| <a href="#myModalLabel">Fale Conosco</a>
+                        ou deseja alterá-la?</a>| 
                     {!! Form::close() !!}
                 </div>
             </div>

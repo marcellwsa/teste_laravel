@@ -6,7 +6,7 @@
  * Time: 11:19
  */
 
-namespace App\Auth;
+namespace SIGPAD\Auth;
 
 
 use Illuminate\Auth\GenericUser;
