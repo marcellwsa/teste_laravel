@@ -39,7 +39,7 @@ class AuthController extends Controller
     {
         try {
             Auth::attempt(array('cpf' => $request->get('login'), 'senha' => $request->get('senha')));
-            return Redirect::intended('welcome'); //mudado aqui
+            return Redirect::intended('/'); //mudado aqui
         } catch (Exception $e) {
             return back()->withErrors($e->getMessage())->withInput();
         }
